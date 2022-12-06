@@ -19,9 +19,9 @@ public class TextTransformerController {
 
     private TextTransformer addTransformation(String transform, TextTransformer currentTransformer) {
         switch (transform) {
-            case "ToUppercase":
+            case "upper":
                 return new ToUppercaseTransformer(currentTransformer);
-            case "ToLowercase":
+            case "lower":
                 return new ToLowercaseTransformer(currentTransformer);
             default:
                 logger.info("Incorrect transformation: {}", transform);
