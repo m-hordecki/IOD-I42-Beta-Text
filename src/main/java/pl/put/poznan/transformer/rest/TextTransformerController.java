@@ -5,10 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 import pl.put.poznan.transformer.data.RequestData;
 import pl.put.poznan.transformer.data.ResponseData;
-import pl.put.poznan.transformer.logic.EmptyTransformer;
-import pl.put.poznan.transformer.logic.TextTransformer;
-import pl.put.poznan.transformer.logic.ToLowercaseTransformer;
-import pl.put.poznan.transformer.logic.ToUppercaseTransformer;
+import pl.put.poznan.transformer.logic.*;
 
 import java.util.Arrays;
 
@@ -23,6 +20,8 @@ public class TextTransformerController {
                 return new ToUppercaseTransformer(currentTransformer);
             case "lower":
                 return new ToLowercaseTransformer(currentTransformer);
+            case "capitalize":
+                return new CapitalizeTransformer(currentTransformer);
             default:
                 logger.info("Incorrect transformation: {}", transform);
                 return currentTransformer;
