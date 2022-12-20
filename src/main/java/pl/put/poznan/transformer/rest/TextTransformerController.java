@@ -23,7 +23,7 @@ public class TextTransformerController {
             case "capitalize":
                 return new CapitalizeTransformer(currentTransformer);
             default:
-                logger.info("Incorrect transformation: {}", transform);
+                logger.warn("Incorrect transformation: {}", transform);
                 return currentTransformer;
         }
     }
@@ -32,14 +32,16 @@ public class TextTransformerController {
     @ResponseBody
     public ResponseData post(@RequestBody RequestData request) {
 
-        logger.debug(request.getText());
-        logger.debug(Arrays.toString(request.getTransforms()));
+        logger.info("Input: {}", request.getText());
+        logger.info("Transforms: {}", Arrays.toString(request.getTransforms()));
 
         TextTransformer transformer = new EmptyTransformer();
         for (String transform : request.getTransforms()) {
             transformer = addTransformation(transform, transformer);
         }
-        return new ResponseData(transformer.transform(request.getText()));
+        String result = transformer.transform(request.getText());
+        logger.info("Result: {}", result);
+        return new ResponseData(result);
     }
 }
 

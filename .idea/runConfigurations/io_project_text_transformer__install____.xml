@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="io-project-text-transformer [install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+  <configuration default="false" name="io-project-text-transformer [install...]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
     <MavenSettings>
       <option name="myGeneralSettings" />
       <option name="myRunnerSettings" />
@@ -11,6 +11,7 @@
           <option name="goals">
             <list>
               <option value="install" />
+              <option value="javadoc:javadoc" />
             </list>
           </option>
           <option name="pomFileName" />

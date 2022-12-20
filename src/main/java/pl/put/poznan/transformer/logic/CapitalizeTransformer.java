@@ -1,7 +1,12 @@
 package pl.put.poznan.transformer.logic;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import pl.put.poznan.transformer.rest.TextTransformerController;
+
 public class CapitalizeTransformer extends TextTransformerDecorator {
 
+    private static final Logger logger = LoggerFactory.getLogger(CapitalizeTransformer.class);
     public CapitalizeTransformer(TextTransformer component) {
         super(component);
     }
@@ -22,7 +27,9 @@ public class CapitalizeTransformer extends TextTransformerDecorator {
             builder.append(" ");
         }
         String result = builder.toString();
-        return result.substring(0, result.length() - 1);
+        result = result.substring(0, result.length() - 1);
+        logger.debug("Result: {}", result);
+        return result;
     }
 }
 

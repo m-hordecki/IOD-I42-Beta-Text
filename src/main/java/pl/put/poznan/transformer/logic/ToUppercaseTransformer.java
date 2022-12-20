@@ -1,6 +1,10 @@
 package pl.put.poznan.transformer.logic;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class ToUppercaseTransformer extends TextTransformerDecorator {
+    private static final Logger logger = LoggerFactory.getLogger(ToUppercaseTransformer.class);
 
     public ToUppercaseTransformer(TextTransformer component) {
         super(component);
@@ -9,6 +13,8 @@ public class ToUppercaseTransformer extends TextTransformerDecorator {
     @Override
     public String transform(String text) {
         String transformed = super.transform(text);
-        return transformed.toUpperCase();
+        String result = transformed.toUpperCase();
+        logger.debug("Result: {}", result);
+        return result;
     }
 }
