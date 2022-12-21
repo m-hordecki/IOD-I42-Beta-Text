@@ -28,6 +28,7 @@ public class TextTransformerController {
         }
     }
 
+    @CrossOrigin
     @RequestMapping(method = RequestMethod.POST, produces = "application/json")
     @ResponseBody
     public ResponseData post(@RequestBody RequestData request) {
