@@ -22,6 +22,8 @@ public class TextTransformerController {
                 return new ToLowercaseTransformer(currentTransformer);
             case "capitalize":
                 return new CapitalizeTransformer(currentTransformer);
+            case "expand":
+                return new AbbreviationExpandTransformer(currentTransformer);
             default:
                 logger.warn("Incorrect transformation: {}", transform);
                 return currentTransformer;
