@@ -4,13 +4,24 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pl.put.poznan.transformer.rest.TextTransformerController;
 
+/**
+ * Capitalizes each word in given input
+ */
 public class CapitalizeTransformer extends TextTransformerDecorator {
 
     private static final Logger logger = LoggerFactory.getLogger(CapitalizeTransformer.class);
+    /**
+     * Creates TextTransformer input for further capitalization
+     */
     public CapitalizeTransformer(TextTransformer component) {
         super(component);
     }
-
+    /**
+     * Transforms first letter in a word to uppercase.
+     *
+     * @param text string input given to transform first letter to uppercase
+     * @return capitalized string
+     */
     @Override
     public String transform(String text) {
         String transformed = super.transform(text);
