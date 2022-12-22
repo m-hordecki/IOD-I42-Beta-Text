@@ -4,11 +4,13 @@ Dla osób pracujących z danymi tekstowymi nasza aplikacja Text Transformer umo�
 
 # Retrospektywa #1 sprintu:
 - bardziej regularne spotkania
-- dopasowywanie miejsca pracy()
+- dopasowywanie miejsca pracy(spokojniejsze i bardziej ciche lokalizacje)
+- każdy znalazł coś dopasowanego do swoich umiejętności i miał daną funkcję w zespole
 
 
-Sprint planning:
+# Sprint planning:
 - napisanie testów
 - rozszerzenie dokumentacji 
-- dopracowanie części 
+- dopracowanie gui
+- przekształcenia do formatu Latex
 
