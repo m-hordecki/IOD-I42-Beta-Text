@@ -25,6 +25,10 @@ function App() {
 			text: "Capitalize",
 			checked: false,
 		},
+		{
+			text: "Expand",
+			checked: false,
+		},
 	]);
 
 	const handleTransform = () => {
@@ -57,7 +61,7 @@ function App() {
 			<Box
 				sx={{
 					display: "flex",
-					margin: "100px 20px auto",
+					margin: "50px -15px 20px",
 					width: "500px",
 					justifyContent: "space-around",
 				}}>
@@ -94,7 +98,8 @@ function App() {
 				onClick={handleTransform}
 				sx={{
 					width: "150px",
-					margin: "20px auto",
+					margin: "20px 0",
+					alignSelf:"flex-end"
 				}}>
 				Transform
 			</Button>
