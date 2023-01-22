@@ -26,6 +26,8 @@ public class TextTransformerController {
                 return new AbbreviationExpandTransformer(currentTransformer);
             case "retract":
                 return new AbbreviationRetractTransformer(currentTransformer);
+            case "remove repetitions":
+                return new RemoveRepetitionsTransformer(currentTransformer);
             default:
                 logger.warn("Incorrect transformation: {}", transform);
                 return currentTransformer;
