@@ -28,6 +28,8 @@ public class TextTransformerController {
                 return new AbbreviationRetractTransformer(currentTransformer);
             case "remove repetitions":
                 return new RemoveRepetitionsTransformer(currentTransformer);
+            case "latex":
+                return new LatexTransformer(currentTransformer);
             default:
                 logger.warn("Incorrect transformation: {}", transform);
                 return currentTransformer;
