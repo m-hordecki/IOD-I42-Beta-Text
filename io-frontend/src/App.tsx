@@ -29,6 +29,18 @@ function App() {
 			text: "Expand",
 			checked: false,
 		},
+		{
+			text: "Retract",
+			checked: false,
+		},
+		{
+			text: "Remove repetitions",
+			checked: false,
+		},
+		{
+			text: "Latex",
+			checked: false,
+		},
 	]);
 
 	const handleTransform = () => {
@@ -62,7 +74,7 @@ function App() {
 				sx={{
 					display: "flex",
 					margin: "50px -15px 20px",
-					width: "500px",
+					width: "auto",
 					justifyContent: "space-around",
 				}}>
 				{transforms.map(transform => (

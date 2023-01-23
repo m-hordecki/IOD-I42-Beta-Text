@@ -26,6 +26,12 @@ public class LatexTransformer extends TextTransformerDecorator
                case '%':
                   output.append("\\%");
                   break;
+               case '*':
+                  output.append("\\*");
+                  break;
+               case '#':
+                  output.append("\\#");
+                  break;
                case '$':
                   output.append("\\$");
                   break;
