@@ -32,6 +32,8 @@ public class TextTransformerController {
                 return new LatexTransformer(currentTransformer);
             case "invert words":
                 return new InvertWordsTransformer(currentTransformer);
+            case "numbers to text":
+                return new NumbersToTextTransformer(currentTransformer);
             default:
                 logger.warn("Incorrect transformation: {}", transform);
                 return currentTransformer;
