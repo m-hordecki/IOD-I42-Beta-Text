@@ -30,6 +30,8 @@ public class TextTransformerController {
                 return new RemoveRepetitionsTransformer(currentTransformer);
             case "latex":
                 return new LatexTransformer(currentTransformer);
+            case "invert words":
+                return new InvertWordsTransformer(currentTransformer);
             default:
                 logger.warn("Incorrect transformation: {}", transform);
                 return currentTransformer;
