@@ -5,14 +5,26 @@ import org.slf4j.LoggerFactory;
 
 import java.lang.StringBuilder;
 
+/**
+ * Transforms given input to Latex suitable format
+ */
+
 public class LatexTransformer extends TextTransformerDecorator
 {
     private static final Logger logger = LoggerFactory.getLogger(LatexTransformer.class);
-
+    /**
+     * Creates TextTransformer input for further capitalization
+     */
     public LatexTransformer(TextTransformer component) {
         super(component);
     }
-
+    
+    /**
+     * Transforms input to Latex format
+     *
+     * @param text string input given to transform to Latex
+     * @return Latex suitable string
+     */
     @Override
     public String transform(String text) {
         String input = super.transform(text);
