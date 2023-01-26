@@ -5,11 +5,15 @@ import org.slf4j.LoggerFactory;
 
 import java.util.regex.Pattern;
 import pl.put.poznan.transformer.data.NumbersToTextData;
-
+/**
+ * Transforms each number into a word in given input
+ */
 public class NumbersToTextTransformer extends TextTransformerDecorator
 {
     private static final Logger logger = LoggerFactory.getLogger(NumbersToTextTransformer.class);
-
+    /**
+     * Creates TextTransformer input for further number to word transformation
+     */
     public NumbersToTextTransformer(TextTransformer component)
     {
         super(component);
@@ -17,7 +21,12 @@ public class NumbersToTextTransformer extends TextTransformerDecorator
 
     private final String intRegex = "^[0-9]{1,4}$";
     private final String floatRegex = "^[0-9]{1,4}\\.[0-9]{1,2}$";
-
+    /**
+     * Transforms every number in given input to a word
+     *
+     * @param text string input given to transform numbers to words
+     * @return string with numbers transformed to words
+     */
     @Override
     public String transform(String text)
     {
