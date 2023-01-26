@@ -13,7 +13,7 @@ public class LatexTransformer extends TextTransformerDecorator
 {
     private static final Logger logger = LoggerFactory.getLogger(LatexTransformer.class);
     /**
-     * Creates TextTransformer input for further capitalization
+     * Creates TextTransformer input for further Latex transformation
      */
     public LatexTransformer(TextTransformer component) {
         super(component);
